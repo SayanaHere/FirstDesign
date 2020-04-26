@@ -353,19 +353,65 @@ textarea {
 #section-1 img {
   width: 100%; }
 
-#Thebeautyofnature {
+#beauty {
   text-align: center;
-  color: #971154; }
+  color: #a52a63; }
 
 /* =============
     Section 2
 ============= */
+#section-2-img img {
+  width: 100%; }
+
+#section-2 {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-2-contain ."; }
+  #section-2 #section-2-contain {
+    grid-area: section-2-contain; }
+
+#section-2 {
+  text-align: center; }
+
 /* =============
     Section 3
 ============= */
+#section-3-img img {
+  width: 100%; }
+
+#section-3 {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-3-contain ."; }
+  #section-3 #section-3-contain {
+    grid-area: section-3-contain; }
+
+#section-3 {
+  text-align: center; }
+
 /* =============
     Section 4
 ============= */
+#section-4 {
+  display: grid;
+  grid-template-columns: 0px auto 0px;
+  grid-template-areas: ". section-5 ."; }
+  #section-4 ul {
+    grid-area: section-5;
+    display: grid;
+    gap: 20px; }
+    #section-4 ul li img {
+      width: 100%; }
+
 /* =============
     Section 5
 ============= */
+#section-5-img img {
+  width: 100%; }
+
+#section-5 {
+  display: grid;
+  grid-template-columns: 15px auto 15px;
+  grid-template-areas: ". section-5-contain ."; }
+  #section-5 #section-5-contain {
+    grid-area: section-5-contain; }
