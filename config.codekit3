@@ -7,7 +7,7 @@
 		"uuidString": "1B950A3E-E382-4118-963D-EC8F4EBFD7DC"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32147",
 "files": {
 	"/deploy/css/styles.css": {
 		"aP": 1,
@@ -52,33 +52,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/deploy/img/section-2/bottomline.png": {
-		"ft": 32768,
-		"iS": 137,
-		"oA": 0,
-		"oAP": "/deploy/img/section-2/bottomline.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
 	"/deploy/img/section-2/picture2.png": {
 		"ft": 32768,
 		"iS": 711903,
 		"oA": 0,
 		"oAP": "/deploy/img/section-2/picture2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/deploy/img/section-2/topline.png": {
-		"ft": 32768,
-		"iS": 137,
-		"oA": 0,
-		"oAP": "/deploy/img/section-2/topline.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
