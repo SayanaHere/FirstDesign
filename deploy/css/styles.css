@@ -380,15 +380,25 @@ footer {
 /* =============
     Section 2
 ============= */
-#section-2 aside {
-  display: grid;
-  grid-template-columns: 10% auto 10%;
-  grid-template-areas: ". section-2 ."; }
-  #section-2 aside #section-2-content {
-    grid-area: section-2; }
-
-#section-2 section img {
-  width: 100%; }
+#section-2 {
+  text-align: center; }
+  @media (min-width: 768px) {
+    #section-2 {
+      display: grid;
+      grid-template-columns: 30% auto;
+      text-align: center; } }
+  @media (min-width: 992px) {
+    #section-2 {
+      display: grid;
+      grid-template-columns: 50% auto;
+      text-align: center; } }
+  @media (min-width: 1200px) {
+    #section-2 {
+      display: grid;
+      grid-template-columns: auto 800px auto;
+      text-align: center; } }
+  #section-2 #section-2-img img {
+    width: 100%; }
 
 /* =============
     Section 3

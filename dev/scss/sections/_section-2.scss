@@ -4,20 +4,30 @@
 
 #section-2{
 
-
-  aside{
-      display: grid;
-      grid-template-columns: 10% auto 10%;
-      grid-template-areas: ". section-2 .";
+    text-align: center;
   
-      #section-2-content{
-          grid-area: section-2;}
-  }
-
-  section{
+    @include md { display: grid; 
+      grid-template-columns: 30% auto;
+     
+      text-align: center;}
+  
+  
+    @include lg { display: grid; 
+      grid-template-columns: 50% auto; 
+      text-align: center;}
+  
+     @include xl{display: grid;
+        grid-template-columns: auto 800px auto;
+        text-align: center;}
+  
+    #section-2-img{
+  
       img{
           width: 100%;
       }
+  
+  
   }
   
-}
+  }
+  
