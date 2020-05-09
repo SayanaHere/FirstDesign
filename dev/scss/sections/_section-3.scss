@@ -14,14 +14,24 @@
     display: grid;
     grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-3-contain .";
-  
+    text-align: center;
+    margin: 50px 0 50px;
+
+
     #section-3-contain{
   
       grid-area: section-3-contain;
+      color: $pink;
+
+      
     }
+    hr{
+      height: 3px;
+      background-color: black;
+      border: none;
   }
+
+}
   
-  #section-3{
-  
-    text-align: center;
-  }
+ 
+

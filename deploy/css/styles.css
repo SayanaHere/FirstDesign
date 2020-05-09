@@ -325,6 +325,12 @@ ul {
 /* =============
     Typography
 ============= */
+body {
+  font-family: 'Libre Baskerville', serif; }
+
+h1 {
+  font-family: 'Baloo 2', serif; }
+
 /* =============
     Buttons
 ============= */
@@ -346,27 +352,104 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+  text-align: right; }
+  @media (min-width: 992px) {
+    #nav-container ul {
+      display: flex;
+      justify-content: flex-end; } }
+  #nav-container ul li {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      #nav-container ul li {
+        align-items: center;
+        display: flex;
+        margin: 0px 30px 0 0; } }
+    #nav-container ul li a:link,
+    #nav-container ul li a:visited {
+      color: #000;
+      text-decoration: none;
+      transition: 0.25s; }
+    #nav-container ul li a:hover {
+      color: #E22F5B; }
+      @media (min-width: 992px) {
+        #nav-container ul li a:hover {
+          color: white; } }
+    #nav-container ul li a:active {
+      color: black; }
+
 /* =============
     Header
 ============= */
+header {
+  background-color: #E22F5B;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white; }
+  header > div {
+    display: grid;
+    grid-template-areas: "logo burger" "navi navi";
+    grid-template-columns: 80% auto; }
+    @media (min-width: 992px) {
+      header > div {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 20% auto; } }
+    header > div #logo-container {
+      grid-area: logo;
+      padding: 20px; }
+    header > div #burger-container {
+      align-items: center;
+      display: flex;
+      grid-area: burger;
+      justify-content: flex-end;
+      padding: 20px; }
+      @media (min-width: 992px) {
+        header > div #burger-container {
+          display: none !important; } }
+      header > div #burger-container i {
+        cursor: pointer; }
+    header > div #nav-container {
+      background-color: #fff;
+      display: none;
+      grid-area: navi;
+      padding: 20px; }
+      @media (min-width: 992px) {
+        header > div #nav-container {
+          background-color: #E22F5B;
+          display: block !important; } }
 /* =============
     Footer
 ============= */
 footer {
   display: grid;
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". footer ."; }
+  grid-template-areas: ". footer .";
+  background-color: #E22F5B;
+  width: 100%;
+  height: 60px; }
   footer #footer-content {
     grid-area: footer;
-    text-align: end; }
-    footer #footer-content img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 15%; }
-      @media (min-width: 768px) {
-        footer #footer-content img {
-          width: 5%; } }
+    display: grid;
+    grid-template-columns: 42% 16% 33% 10%;
+    grid-template-areas: ". img . text";
+    position: relative; }
+    footer #footer-content #footer-image {
+      background-image: url("../img/footer/logo.png");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      grid-area: img; }
+    footer #footer-content #footer-text {
+      grid-area: text;
+      color: white;
+      font-size: 0.8125rem;
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+
 /* =============
     Section 1
 ============= */
@@ -381,24 +464,63 @@ footer {
     Section 2
 ============= */
 #section-2 {
-  text-align: center; }
-  @media (min-width: 768px) {
-    #section-2 {
-      display: grid;
-      grid-template-columns: 30% auto;
-      text-align: center; } }
-  @media (min-width: 992px) {
-    #section-2 {
-      display: grid;
-      grid-template-columns: 50% auto;
-      text-align: center; } }
+  margin-top: 60px;
+  margin-bottom: 30px; }
   @media (min-width: 1200px) {
     #section-2 {
       display: grid;
-      grid-template-columns: auto 800px auto;
-      text-align: center; } }
-  #section-2 #section-2-img img {
+      grid-template-columns: auto 1200px auto;
+      grid-template-areas: ". section-2-big ."; } }
+  @media (min-width: 1200px) {
+    #section-2 #section-2-big {
+      grid-area: section-2-big; } }
+  @media (min-width: 768px) {
+    #section-2 #section-2-big {
+      display: grid;
+      grid-template-columns: 35% auto;
+      grid-template-areas: "section-2-img ." "section-2-img section-2-container" "section-2-img .";
+      margin: 50px 0 50px; } }
+  @media (min-width: 992px) {
+    #section-2 #section-2-big {
+      grid-template-columns: 50% auto;
+      padding: 12px;
+      margin: 48px 0 48px 0; } }
+  #section-2 #section-2-big #section-2-img img {
     width: 100%; }
+  @media (min-width: 768px) {
+    #section-2 #section-2-big #section-2-img {
+      grid-area: section-2-img; } }
+  #section-2 #section-2-big #section-2-container {
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-2-content ."; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-big #section-2-container {
+        grid-area: section-2-container; } }
+  #section-2 #section-2-big #section-2-content {
+    grid-area: section-2-content;
+    margin-bottom: 60px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-big #section-2-content {
+        text-align: left; } }
+    #section-2 #section-2-big #section-2-content h1 {
+      font-size: 1.5625rem;
+      line-height: 1.75rem; }
+      @media (min-width: 768px) {
+        #section-2 #section-2-big #section-2-content h1 {
+          font-size: 2.1875rem;
+          line-height: 2.1875rem; } }
+    #section-2 #section-2-big #section-2-content h3 {
+      font-size: 1rem;
+      line-height: 1.5625rem; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-big #section-2-content {
+        margin-bottom: 0; } }
+    #section-2 #section-2-big #section-2-content hr {
+      height: 4px;
+      background-color: #E22F5B;
+      border: none; }
 
 /* =============
     Section 3
@@ -409,83 +531,97 @@ footer {
 #section-3 {
   display: grid;
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-3-contain ."; }
+  grid-template-areas: ". section-3-contain .";
+  text-align: center;
+  margin: 50px 0 50px; }
   #section-3 #section-3-contain {
-    grid-area: section-3-contain; }
-
-#section-3 {
-  text-align: center; }
+    grid-area: section-3-contain;
+    color: #E22F5B; }
+  #section-3 hr {
+    height: 3px;
+    background-color: black;
+    border: none; }
 
 /* =============
     Section 4
 ============= */
-#section-4 {
-  grid-area: section-4; }
-  #section-4 ul {
-    grid-area: section-4;
+@media (min-width: 992px) {
+  #section-4 {
     display: grid;
-    grid-gap: 20px; }
-    @media (min-width: 992px) {
-      #section-4 ul {
-        grid-template-columns: 15px auto 15px;
-        grid-template-areas: ". section-4 ,"; } }
-    @media (min-width: 768px) {
-      #section-4 ul {
-        grid-template-columns: 50% 50%;
-        grid-template-areas: "g1 g1" "g1 g1" "g2 g3"; } }
-    @media (min-width: 992px) {
-      #section-4 ul {
-        grid-template-columns: 60% auto;
-        grid-template-areas: "g1 g2" "g1 g3"; } }
-    #section-4 ul li img {
-      width: 100%; }
-    @media (min-width: 768px) {
-      #section-4 ul #g1 {
-        grid-area: g1; } }
-    @media (min-width: 768px) {
-      #section-4 ul #g2 {
-        grid-area: g2; } }
-    @media (min-width: 768px) {
-      #section-4 ul #g3 {
-        grid-area: g3; } }
-  @media (min-width: 1200px) {
-    #section-4 {
-      grid-template-columns: auto 1200px auto; } }
+    grid-template-areas: ". section-4 .";
+    grid-template-columns: 15px auto 15px; } }
+
+@media (min-width: 1200px) {
+  #section-4 {
+    grid-template-columns: auto 1200px auto; } }
+
+#section-4 ul {
+  grid-area: section-4;
+  display: grid;
+  grid-template-rows: repeat(3, 290px);
+  grid-gap: 20px;
+  grid-template-areas: "g1" "g2" "g3"; }
   @media (min-width: 768px) {
-    #section-4 {
-      grid-template-columns: auto 768px auto; } }
+    #section-4 ul {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(3, 340px);
+      grid-template-areas: "g1 g1" "g1 g1" "g2 g3"; } }
+  @media (min-width: 992px) {
+    #section-4 ul {
+      grid-template-columns: 60% auto;
+      grid-template-rows: repeat(2, 340px);
+      grid-template-areas: "g1 g2" "g1 g3"; } }
+  #section-4 ul li {
+    background-size: cover;
+    background-position: center; }
+  #section-4 ul #g1 {
+    grid-area: g1;
+    background-image: url("../img/section-4/picture4.png"); }
+  #section-4 ul #g2 {
+    grid-area: g2;
+    background-image: url("../img/section-4/picture5.jpg"); }
+  #section-4 ul #g3 {
+    grid-area: g3;
+    background-image: url("../img/section-4/picture6.jpg"); }
+
 /* =============
     Section 5
 ============= */
 #section-5 {
   display: grid;
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-5 ."; }
+  grid-template-areas: ". section-5 .";
+  margin: 40px 0 40px; }
   @media (min-width: 768px) {
     #section-5 {
-      grid-template-columns: 15% auto 15%; } }
+      grid-template-columns: 15% auto 15%;
+      margin: 50px 0 50px; } }
   @media (min-width: 992px) {
     #section-5 {
-      grid-template-columns: 15px auto 50px;
-      grid-template-areas: ". section-5 ."; } }
+      grid-template-columns: 15px auto 50px; } }
+  @media (min-width: 1200px) {
+    #section-5 {
+      grid-template-columns: auto 1200px auto; } }
   #section-5 #section-5-content {
     grid-area: section-5;
     text-align: justify; }
     #section-5 #section-5-content img {
-      width: 100%; }
+      display: block;
+      margin: auto; }
     @media (min-width: 992px) {
       #section-5 #section-5-content {
-        display: grid;
-        grid-template-columns: 50% auto;
-        grid-template-areas: "img ." "img text" "img ."; } }
-  @media (min-width: 768px) {
-    #section-5 #section-5-img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%; } }
-  @media (min-width: 992px) {
-    #section-5 #section-5-img {
-      grid-area: img; } }
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; } }
   #section-5 #section-5-text {
     grid-area: text; }
+    @media (min-width: 992px) {
+      #section-5 #section-5-text {
+        display: grid;
+        grid-template-columns: 125px auto 50px;
+        grid-template-areas: ". lgtext ."; } }
+    #section-5 #section-5-text p {
+      font-size: 1.125rem;
+      line-height: 1.875rem; }
+  #section-5 #section-5-bigtext {
+    grid-area: lgtext; }
