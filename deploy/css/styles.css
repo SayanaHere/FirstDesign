@@ -453,13 +453,20 @@ footer {
 /* =============
     Section 1
 ============= */
-#section-1 img {
-  width: 100%; }
-
-#beauty {
-  text-align: center;
-  color: #a52a63; }
-
+#section-1 {
+  background-image: url("../img/section-1/picture1.png");
+  background-size: cover;
+  background-position: center;
+  height: 285px; }
+  @media (min-width: 768px) {
+    #section-1 {
+      height: 476px; } }
+  @media (min-width: 992px) {
+    #section-1 {
+      height: 768px; } }
+  @media (min-width: 1200px) {
+    #section-1 {
+      height: 871px; } }
 /* =============
     Section 2
 ============= */
