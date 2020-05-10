@@ -6,14 +6,14 @@
     background-image: url('../img/section-1/picture1.png');
        background-size: cover;
        background-position: center;
-       height: 285px;
+       height: 371px;
 
        @include md{
            height: 476px;
        }
 
        @include lg{
-            height: 768px;
+            height: 600px;
         }
 
         @include xl{
