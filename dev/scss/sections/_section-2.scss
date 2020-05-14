@@ -58,10 +58,12 @@
               #section-2-content{
                   grid-area: section-2-content;
                   margin-bottom: 60px;
-                  text-align: center;
+                  text-align: center; 
+                  
 
                   @include md{
                       text-align: left;
+                      color: $pink;
                   }
 
                   h1{
@@ -85,7 +87,7 @@
 
                   hr{
                       height: 4px;
-                      background-color: $pink;
+                      background-color: $black;
                       border: none;
                   }
               }

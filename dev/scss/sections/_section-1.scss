@@ -6,18 +6,20 @@
     background-image: url('../img/section-1/picture1.png');
        background-size: cover;
        background-position: center;
-       height: 371px;
+       height: 420px;
 
        @include md{
-           height: 476px;
+           height: 600px;
        }
 
        @include lg{
-            height: 600px;
+            height: 700px;
         }
 
         @include xl{
-            height: 871px;
+            height: 1000px;
          }
+
+         
 }
 
