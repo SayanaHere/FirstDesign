@@ -530,7 +530,8 @@ footer {
   #section-2 #section-2-big #section-2-content {
     grid-area: section-2-content;
     margin-bottom: 60px;
-    text-align: center; }
+    text-align: center;
+    color: #d66e88; }
     @media (min-width: 768px) {
       #section-2 #section-2-big #section-2-content {
         text-align: left;
